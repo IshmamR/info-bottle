@@ -21,15 +21,16 @@ class Home extends Component {
                         </div>
                     </div>
                     
-                    <div className="w-full md:w-1/4">	
-                        <div className="w-full border-b border-black mb-2">
+                    <div className="w-full md:w-1/4 px-2">	
+                        <div className="w-full border-b border-white mb-2">
                             <div className="flex justify-between items-center">
                                 <h3 className="text-2xl"><i>Latest Episodes</i></h3>
                             </div>
                         </div>
                         <div className="w-full flex flex-col">
                             <div className="h-32 flex my-3">
-                                <img className="w-1/4 h-full object-cover flex-1" src="imgs/goku.jpg" alt="yo" />
+                                <img className="w-1/4 h-full object-cover flex-1" 
+                                    src="https://cutewallpaper.org/21/anime-dragon-and-girl/Dragon-Girls-Anime-Amino.jpg" alt="yo" />
                                 <h3 className="md:text-lg ml-3 flex-1">
                                     Anime name <br/>Episode number
                                 </h3>

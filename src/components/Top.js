@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Carousel from 'react-elastic-carousel'; // carousel
 
@@ -40,7 +41,9 @@ class Top extends Component {
                 {animes.map(anime => 
                     <div className="anime item text-center" key={anime.mal_id} >
                         <div className="top-image" >
-                            <img src={ anime.image_url } alt={anime.title} />
+                            <Link to={'/' + anime.mal_id}>
+                                <img src={ anime.image_url } alt={anime.title} />
+                            </Link>
                         </div>
                         <small className="mx-4">{anime.title}</small>
                     </div>

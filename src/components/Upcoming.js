@@ -41,7 +41,9 @@ class Upcoming extends Component {
                 {animes.map(anime => 
                     <div className="anime item text-center" key={anime.mal_id} >
                         <div className="up-image" >
-                            <img src={ anime.image_url } alt={anime.title} />
+                            <Link to={'/' + anime.mal_id}>
+                                <img src={ anime.image_url } alt={anime.title} />
+                            </Link>
                         </div>
                     </div>
                 )}
@@ -52,7 +54,7 @@ class Upcoming extends Component {
         
         return (
             <div className="Upcoming">
-                <div className="w-11/12 border-b border-black mb-2 m-auto">
+                <div className="w-11/12 border-b border-white mb-2 m-auto">
 				    <div className="flex justify-between items-center">
                         <h3 className="text-2xl"><i>Upcoming Anime</i></h3>
                         <Link to="/upcoming-all" className="third-color">view more...</Link>

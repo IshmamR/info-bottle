@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 class TopAll extends Component {
@@ -25,7 +26,9 @@ class TopAll extends Component {
             animes.map(anime => {
                 return (
                     <div className="top-card w-5/6 md:w-56 roubded overflow-y-scroll overflow-x-hidden md:overflow-hidden bg-primary-color m-auto md:mx-4 my-2 p-2" key={anime.mal_id}>
-                        <img className="object-fill h-auto md:h-64 w-full" src={anime.image_url} alt="..." />
+                        <Link to={'/' + anime.mal_id}>
+                            <img className="object-fill h-auto md:h-64 w-full" src={anime.image_url} alt="..." />
+                        </Link>
                         <div className="p-4">
                             <p className="text-lg font-bold">{anime.title}</p>
                             <p className="text-lg break-words">Genres:&nbsp;
